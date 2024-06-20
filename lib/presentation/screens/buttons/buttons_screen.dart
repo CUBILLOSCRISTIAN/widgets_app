@@ -57,9 +57,6 @@ class _ButtonsView extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(Icons.yard_rounded),
                 label: const Text('TextButton Icon')),
-
-            //TODO:  Custom button
-
             IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.app_blocking_outlined)),
