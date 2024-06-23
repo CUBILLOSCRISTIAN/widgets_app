@@ -2,10 +2,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
 
 //DarkMode
+//Un simple bool
 
 final isDarkModeProvider = StateProvider(
   (ref) => false,
 );
+//Un simple int
 final selectedColorProvider = StateProvider(
   (ref) => 0,
 );
@@ -14,3 +16,20 @@ final selectedColorProvider = StateProvider(
 final colorListProvider = Provider(
   (ref) => colorList,
 );
+
+//Un objero de tipo AppTheme (Cuastom)
+final themeNotifierProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
+  (ref) => ThemeNotifier(),
+);
+
+class ThemeNotifier extends StateNotifier<AppTheme> {
+  ThemeNotifier() : super(AppTheme());
+
+  void toggleDarkMode() {
+    state = state.copyWith(isDarkMode: !state.isDarkMode);
+  }
+
+  void changeColorIndex(int colorIndex) {
+    state = state.copyWith(selectedColor: colorIndex);
+  }
+}
