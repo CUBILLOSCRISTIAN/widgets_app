@@ -26,9 +26,7 @@ class CardsScreen extends StatelessWidget {
 }
 
 class _CardsView extends StatelessWidget {
-  const _CardsView({
-    super.key,
-  });
+  const _CardsView();
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +160,6 @@ class _CardType4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Card(
       clipBehavior: Clip.hardEdge, //No se salga de su padre
       elevation: elevation,

@@ -10,7 +10,7 @@ class UiControlScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Ui controls'),
       ),
-      body: _UiControlsView(),
+      body: const _UiControlsView(),
     );
   }
 }
